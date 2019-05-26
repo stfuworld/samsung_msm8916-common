@@ -10,6 +10,7 @@ allow init self:process execmem;
 allow init self:socket { read write };
 allow init socket_device:sock_file unlink;
 allow init sysfs:file { open read setattr write };
+allow init sysfs_batteryinfo:file { setattr };
 allow init sysfs_fm:file { open write };
 allow init sysfs_leds:lnk_file read;
 allow init system_file:{ dir file } { mounton relabelfrom };
