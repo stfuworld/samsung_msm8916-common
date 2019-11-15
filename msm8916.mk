@@ -317,11 +317,9 @@ PRODUCT_PACKAGES += \
 
 # Radio
 PRODUCT_PACKAGES += \
-    librmnetctl \
     libshim_secril \
     libxml2 \
     macloader \
-    rmnetcli
 
 # Ramdisk
 PRODUCT_PACKAGES += \
