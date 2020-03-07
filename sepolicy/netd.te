@@ -1,3 +1,0 @@
-#============= netd ==============
-allow netd sysfs:file { open write };
-

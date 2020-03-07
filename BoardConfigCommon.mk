@@ -146,8 +146,6 @@ BOARD_KERNEL_CMDLINE += \
 	ehci-hcd.park=3 \
 	androidboot.bootdevice=7824900.sdhci
 
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
-
 BOARD_CUSTOM_BOOTIMG := true
 BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
 BOARD_DTBTOOL_ARGS := -2
