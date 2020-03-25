@@ -25,9 +25,13 @@ $(call inherit-product, vendor/samsung/msm8916-common/msm8916-common-vendor.mk)
 # Inherit from vendor
 ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),j5lte j5ltechn j5nlte j5nltexx j53gxx))
 $(call inherit-product, vendor/samsung/j5-common/j5-common-vendor.mk)
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay_j5
 else
 ifeq ($(TARGET_DEVICE),$(filter $(TARGET_DEVICE),j5xnlte j5xlte))
 $(call inherit-product, vendor/samsung/j5x-common/j5x-common-vendor.mk)
+DEVICE_PACKAGE_OVERLAYS += \
+    $(LOCAL_PATH)/overlay_j5x
 endif
 endif
 
