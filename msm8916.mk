@@ -183,10 +183,6 @@ PRODUCT_PACKAGES += \
 # Exclude AudioFX
 TARGET_EXCLUDES_AUDIOFX := true
 
-# FlipFlap
-PRODUCT_PACKAGES += \
-    FlipFlap
-
 # FM
 PRODUCT_PACKAGES += \
     qcom.fmradio \
