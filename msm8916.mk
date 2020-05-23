@@ -364,6 +364,11 @@ PRODUCT_PACKAGES += \
     android.hardware.sensors@1.0-impl \
     sensors.msm8916
 
+# Thermal engine
+PRODUCT_PACKAGES += \
+    android.hardware.thermal@1.0-service \
+    android.hardware.thermal@2.0-service
+
 # USB HAL
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
