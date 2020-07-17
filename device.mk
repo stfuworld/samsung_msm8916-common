@@ -1,5 +1,5 @@
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Include full languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
