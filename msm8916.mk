@@ -276,7 +276,9 @@ PRODUCT_PACKAGES += \
     libbson \
     libcurl \
     libkeyutils \
-    tcpdump
+    tcpdump \
+    Email \
+    Exchange2
 
 # Permissions
 PRODUCT_COPY_FILES += \
