@@ -1,3 +1,4 @@
 #============= bootanim ==============
 allow bootanim sysfs_kgsl_gpuclk:file { getattr open read };
+allow bootanim system_data_file:dir read;
 

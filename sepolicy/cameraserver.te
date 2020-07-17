@@ -1,0 +1,6 @@
+#============= cameraserver ==============
+allow cameraserver camera_data_file:dir search;
+allow cameraserver mm-qcamerad:unix_dgram_socket sendto;
+allow cameraserver socket_device:sock_file write;
+allow cameraserver sysfs:file { open read };
+

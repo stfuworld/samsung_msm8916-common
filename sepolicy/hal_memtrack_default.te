@@ -7,9 +7,12 @@ allow hal_memtrack_default {
     hal_light_default
     hal_power_default
     hal_radio_config_default
+    hal_thermal_default
+    hal_thermal_default
     hal_usb_default
     hal_vibrator_default
     hwservicemanager
+    idmap
     init
     servicemanager
     vndservicemanager
@@ -23,9 +26,12 @@ allow hal_memtrack_default {
     hal_light_default
     hal_power_default
     hal_radio_config_default
+    hal_thermal_default
+    hal_thermal_default
     hal_usb_default
     hal_vibrator_default
     hwservicemanager
+    idmap
     init
     servicemanager
     vndservicemanager

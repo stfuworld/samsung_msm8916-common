@@ -1,0 +1,4 @@
+#============= misc_writer ==============
+allow misc_writer block_device:blk_file { getattr write };
+allow misc_writer proc_dt_firmware_android:dir search;
+

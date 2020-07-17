@@ -1,0 +1,3 @@
+#============= mediaprovider ==============
+allow mediaprovider mnt_media_rw_file:dir getattr;
+
