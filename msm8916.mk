@@ -308,10 +308,10 @@ PRODUCT_COPY_FILES += \
 # Power HAL
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2-service-qti \
-    android.hardware.power.stats@1.0-service \
+    android.hardware.power.stats@1.0-service.mock \
     power.qcom
 
-# Proprieties
+# Properties
 -include device/samsung/msm8916-common/system_prop.mk
 
 # Radio
