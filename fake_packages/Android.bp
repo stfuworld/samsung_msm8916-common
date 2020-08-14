@@ -1,0 +1,5 @@
+java_library {
+    name: "com.android.apex.cts.shim.v1_prebuilt",
+    installable: true,
+}
+
