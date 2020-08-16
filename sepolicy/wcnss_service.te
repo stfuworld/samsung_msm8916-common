@@ -1,0 +1,4 @@
+#============= wcnss_service ==============
+allow wcnss_service efs_file:dir search;
+allow wcnss_service efs_file:file { open read };
+
