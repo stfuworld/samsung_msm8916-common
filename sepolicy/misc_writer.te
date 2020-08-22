@@ -1,5 +1,5 @@
 #============= misc_writer ==============
-allow misc_writer block_device:blk_file { getattr open write };
-allow misc_writer proc_dt_firmware_android:dir search;
-allow misc_writer proc_dt_firmware_android:file { open read };
+allow misc_writer block_device:blk_file { getattr open read write };
+allow misc_writer proc_dt_firmware_android:dir { open read search };
+allow misc_writer proc_dt_firmware_android:file { getattr open read };
 

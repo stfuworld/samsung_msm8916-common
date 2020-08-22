@@ -1,4 +1,5 @@
 #============= wcnss_service ==============
 allow wcnss_service efs_file:dir search;
-allow wcnss_service efs_file:file { open read };
+allow wcnss_service efs_file:file { getattr open read };
+allow wcnss_service persist_data_file:dir search;
 

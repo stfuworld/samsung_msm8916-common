@@ -1,0 +1,6 @@
+#============= hal_drm_widevine ==============
+allow hal_drm_widevine firmware_file:lnk_file read;
+allow hal_drm_widevine vendor_data_file:dir { add_name create write };
+allow hal_drm_widevine vendor_data_file:file { create getattr open read write };
+allow hal_drm_widevine vfat:dir search;
+

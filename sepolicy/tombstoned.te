@@ -1,0 +1,3 @@
+#============= tombstoned ==============
+allow tombstoned system_data_file:dir { open read };
+
