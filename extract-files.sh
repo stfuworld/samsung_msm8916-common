@@ -1,7 +1,6 @@
 #!/bin/bash
-#
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2017 The LineageOS Project
+# Copyright (C) 2020 The AncientOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -35,7 +34,7 @@ VENDOR=samsung
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-LINEAGE_ROOT="$MY_DIR"/../../..
+ANCIENT_ROOT="$MY_DIR"/../../..
 DEVICE_DIR="$MY_DIR"/../$DEVICE
 DEVICE_COMMON_DIR="$MY_DIR"/../$DEVICE_COMMON
 
@@ -52,7 +51,7 @@ if [ -z "$SETUP_DEVICE_COMMON_DIR" ]; then
     SETUP_DEVICE_COMMON_DIR=0
 fi
 
-HELPER="$LINEAGE_ROOT"/vendor/lineage/build/tools/extract_utils.sh
+HELPER="$ANCIENT_ROOT"/vendor/ancient/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -95,19 +94,19 @@ fi
 
 if  [ "$SETUP_BOARD_COMMON_DIR" -eq 1 ]; then
     # Initialize the helper for common
-    setup_vendor "$BOARD_COMMON" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
+    setup_vendor "$BOARD_COMMON" "$VENDOR" "$ANCIENT_ROOT" true "$CLEAN_VENDOR"
     extract "$MY_DIR"/proprietary-files.txt "$SRC" "$SECTION"
 fi
 
 if [ "$SETUP_DEVICE_COMMON_DIR" -eq 1 ] && [ -s $DEVICE_COMMON_DIR/proprietary-files.txt ]; then
     # Reinitialize the helper for device-common
-    setup_vendor "$DEVICE_COMMON" "$VENDOR" "$LINEAGE_ROOT" true "$CLEAN_VENDOR"
+    setup_vendor "$DEVICE_COMMON" "$VENDOR" "$ANCIENT_ROOT" true "$CLEAN_VENDOR"
     extract $DEVICE_COMMON_DIR/proprietary-files.txt "$SRC" "$SECTION"
 fi
 
 if [ "$SETUP_DEVICE_DIR" -eq 1 ] && [ -s $DEVICE_DIR/proprietary-files.txt ]; then
     # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$LINEAGE_ROOT" false "$CLEAN_VENDOR"
+    setup_vendor "$DEVICE" "$VENDOR" "$ANCIENT_ROOT" false "$CLEAN_VENDOR"
     extract $DEVICE_DIR/proprietary-files.txt "$SRC" "$SECTION"
 fi
 
