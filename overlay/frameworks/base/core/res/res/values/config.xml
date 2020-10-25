@@ -151,10 +151,10 @@
     <string name="config_datause_iface">rmnet0</string>
 
     <!--  Maximum number of supported users -->
-    <integer name="config_multiuserMaximumUsers">1</integer>
+    <integer name="config_multiuserMaximumUsers">4</integer>
 
     <!-- Whether UI for multi user should be shown -->
-    <bool name="config_enableMultiUserUI">false</bool>
+    <bool name="config_enableMultiUserUI">true</bool>
 
     <!-- If true, the screen can be rotated via the accelerometer in all 4
          rotations as the default behavior. -->
