@@ -62,6 +62,9 @@ TARGET_KERNEL_CONFIG := msm8916_sec_defconfig
 TARGET_KERNEL_SELINUX_CONFIG := selinux_defconfig
 TARGET_KERNEL_SOURCE := kernel/samsung/msm8916
 
+SELINUX_IGNORE_NEVERALLOWS := true
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive
+
 # ANT+
 BOARD_ANT_WIRELESS_DEVICE := "vfs-prerelease"
 
