@@ -180,3 +180,47 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # ZRAM - Size in MB
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.zram.size=128
+    
+# AB tweaks
+PRODUCT_PROPERTY_OVERRIDES += \
+    windowsmgr.max_events_per_sec=150 \
+    ro.min_pointer_dur=8 \
+    ro.max.fling_velocity=12000 \
+    ro.min.fling_velocity=8000 \
+    persist.sys.scrollingcache=3 \
+    debug.sf.hw=1 \
+    net.tcp.buffersize.default=4096,87380,256960,4096,16384,256960 \
+    net.tcp.buffersize.wifi=4096,87380,256960,4096,16384,256960 \
+    net.tcp.buffersize.umts=4096,87380,256960,4096,16384,256960 \
+    net.tcp.buffersize.gprs=4096,87380,256960,4096,16384,256960 \
+    net.tcp.buffersize.edge=4096,87380,256960,4096,16384,256960 \
+    net.rmnet0.dns1=8.8.8.8 \
+    net.rmnet0.dns2=8.8.4.4 \
+    net.dns1=8.8.8.8 \
+    net.dns2=8.8.4.4 \
+    logcat.live=disable \
+    ro.media.enc.jpeg.quality=100 \
+    ro.config.hw_quickpoweron=true \
+    ro.ril.power_collapse=1 \
+    pm.sleep_mode=1 \
+    wifi.supplicant_scan_interval=180 \
+    ro.mot.eri.losalert.delay=1000 \
+    power_supply.wakeup=enable \
+    ro.config.hw_fast_dormancy=1 \
+    ro.config.hw_power_saving=1 \
+    ro.kernel.checkjni=0 \
+    ro.kernel.android.checkjni=0 \
+    debug.sf.hw=1 \
+    persist.sys.ui.hw=1 \
+    debug.performance.tuning=1 \
+    video.accelerate.hw=1 \
+    debug.egl.profiler=1 \
+    debug.egl.hw=1 \
+    debug.composition.type=gpu \
+    media.stagefright.enable-player=true \
+    media.stagefright.enable-meta=true \
+    media.stagefright.enable-scan=true \
+    media.stagefright.enable-http=true \
+    media.stagefright.enable-rtsp=true \
+    media.stagefright.enable-record=true
+
