@@ -351,6 +351,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/seccomp/mediacodec-seccomp.policy:$(TARGET_COPY_OUT_VENDOR)/etc/seccomp_policy/mediacodec.policy
 
+# SetupWizardPrebuilt
+PRODUCT_PACKAGES += \
+    SetupWizardPrebuilt-arm
+
 # RIL
 PRODUCT_PACKAGES += \
 	libril \
