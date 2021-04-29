@@ -102,8 +102,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     libcamera_shim \
     libmm-qcamera \
-    camera.msm8916
-
+    camera.msm8916 \
+    Snap
+    
 # Connectivity Engine support
 PRODUCT_PACKAGES += \
     libcnefeatureconfig
