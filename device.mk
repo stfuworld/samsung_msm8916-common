@@ -1,5 +1,5 @@
-# Inherit some common Ancient stuff.
-$(call inherit-product, vendor/ancient/config/common_full_phone.mk)
+# Inherit some common aosp stuff.
+$(call inherit-product, vendor/aosp/config/common.mk)
 
 # Include full languages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -13,9 +13,17 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_CHARACTERISTICS := phone
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-# Ancient
-ANCIENT_NOGAPPS := true
-IS_PHONE := true
+# Release name
+PRODUCT_RELEASE_NAME := Samsung Galaxy J5
+
+# Boot animation
+TARGET_SCREEN_WIDTH := 720
+TARGET_SCREEN_HEIGHT := 1280
 TARGET_BOOT_ANIMATION_RES := 720
-ANCIENT_OFFICIAL=true
-FORCE_OTA=true
+
+# Gapps
+IS_PHONE := true
+TARGET_MINIMAL_APPS := true
+TARGET_INCLUDE_STOCK_ARCORE := false
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
+TARGET_GAPPS_ARCH := arm
