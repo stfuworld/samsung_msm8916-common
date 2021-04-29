@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 # Copyright (C) 2016 The CyanogenMod Project
-# Copyright (C) 2020 The AncientOS Project
+# Copyright (C) 2020 The AOSP Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -40,7 +40,7 @@ INITIAL_COPYRIGHT_YEAR=2017
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "$MY_DIR" ]]; then MY_DIR="$PWD"; fi
 
-ANCIENT_ROOT="$MY_DIR"/../../..
+AOSP_ROOT="$MY_DIR"/../../..
 DEVICE_DIR="$MY_DIR"/../$DEVICE
 DEVICE_COMMON_DIR="$MY_DIR"/../$DEVICE_COMMON
 
@@ -57,7 +57,7 @@ if [ -z "$SETUP_DEVICE_COMMON_DIR" ]; then
     SETUP_DEVICE_COMMON_DIR=0
 fi
 
-HELPER="$ANCIENT_ROOT"/vendor/ancient/build/tools/extract_utils.sh
+HELPER="$AOSP_ROOT"/vendor/aosp/build/tools/extract_utils.sh
 if [ ! -f "$HELPER" ]; then
     echo "Unable to find helper script at $HELPER"
     exit 1
@@ -66,7 +66,7 @@ fi
 
 if [ "$SETUP_DEVICE_COMMON_DIR" -eq 1 ] && [ -s $DEVICE_COMMON_DIR/proprietary-files.txt ]; then
     # Reinitialize the helper for device
-    setup_vendor "$DEVICE_COMMON" "$VENDOR" "$ANCIENT_ROOT" true
+    setup_vendor "$DEVICE_COMMON" "$VENDOR" "$AOSP_ROOT" true
 
     # Copyright headers and guards
     write_headers "$DEVICES"
@@ -80,7 +80,7 @@ fi
 
 if [ "$SETUP_DEVICE_DIR" -eq 1 ] && [ -s $DEVICE_DIR/proprietary-files.txt ]; then
     # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$ANCIENT_ROOT"
+    setup_vendor "$DEVICE" "$VENDOR" "$AOSP_ROOT"
 
     # Copyright headers and guards
     write_headers
@@ -97,7 +97,7 @@ if  [ "$SETUP_BOARD_COMMON_DIR" -eq 1 ]; then
    DEVICE_COMMON=$BOARD_COMMON
 
    # Initialize the helper
-   setup_vendor "$BOARD_COMMON" "$VENDOR" "$ANCIENT_ROOT" true
+   setup_vendor "$BOARD_COMMON" "$VENDOR" "$ASOP_ROOT" true
 
    # Copyright headers and guards
    write_headers "$DEVICES_ALL"
