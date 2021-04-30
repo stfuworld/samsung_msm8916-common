@@ -76,7 +76,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     debug.composition.type=c2d \
     debug.egl.hw=1 \
     debug.sf.hw=1 \
-    debug.hwui.use_buffer_age=false
+    debug.hwui.use_buffer_age=false \
+    sys.display-size=1920x1080
 
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
     ro.surface_flinger.max_frame_buffer_acquired_buffers=3 \
@@ -111,6 +112,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
     mm.enable.qcom_parser=3183219 \
     mm.enable.smoothstreaming=true \
     mmp.enable.3g2=true
+
+# Memory optimizations
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.vendor.qti.sys.fw.bservice_enable=true \
+    ro.vendor.qti.sys.fw.bservice_limit=5 \
+    ro.vendor.qti.sys.fw.bservice_age=5000
 
 # Misc.
 PRODUCT_PROPERTY_OVERRIDES += \
