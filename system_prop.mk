@@ -191,6 +191,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.zram.size=128
     
+# Google Play Store
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.opengles.version=196608
+    
 # AB tweaks
 PRODUCT_PROPERTY_OVERRIDES += \
     windowsmgr.max_events_per_sec=150 \
