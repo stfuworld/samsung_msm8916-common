@@ -224,3 +224,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     media.stagefright.enable-rtsp=true \
     media.stagefright.enable-record=true
 
+# Zygote preforking
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.device_config.runtime_native.usap_pool_enabled=true
