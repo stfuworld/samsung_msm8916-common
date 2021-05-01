@@ -13,9 +13,14 @@ PRODUCT_MANUFACTURER := samsung
 PRODUCT_CHARACTERISTICS := phone
 PRODUCT_GMS_CLIENTID_BASE := android-samsung
 
-# Ancient
-ANCIENT_NOGAPPS := true
+# GApps & Stuff
+ANCIENT_GAPPS := true
+TARGET_GAPPS_ARCH := arm
 IS_PHONE := true
+WITH_MINI_GAPPS := true
+TARGET_SUPPORTS_GOOGLE_RECORDER := false
 TARGET_BOOT_ANIMATION_RES := 720
-ANCIENT_OFFICIAL=true
-FORCE_OTA=true
+
+# GApps permissions
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/privapp-permissions-gapp.xml:system/product/etc/permissions/privapp-permissions-gapp.xml
