@@ -1,3 +1,2 @@
 #============= untrusted_app ==============
-allow untrusted_app theme_prop:file { getattr open read };
-
+allow untrusted_app theme_prop:file { read };
